@@ -1,8 +1,6 @@
-﻿
+﻿using TiendaOnline.Shared.Domain;
 
-using TiendaOnline.Shared.Domain;
-
-namespace TiendaOnline.Products.Domain
+namespace TiendaOnline.Products.Domain.Products
 {
     public class ProductId : IdValueObject
     {
