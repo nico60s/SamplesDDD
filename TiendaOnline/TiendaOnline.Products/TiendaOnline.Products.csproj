@@ -9,8 +9,6 @@
   <ItemGroup>
     <Folder Include="Application\Configuration\" />
     <Folder Include="Domain\Categories\Rules\" />
-    <Folder Include="Domain\Products\Events\" />
-    <Folder Include="Domain\Products\Rules\" />
   </ItemGroup>
 
   <ItemGroup>
