@@ -4,14 +4,9 @@ using TiendaOnline.Shared.Application.Contracts;
 
 namespace TiendaOnline.Products.Application.Features.Create
 {
-    internal class CreateCommandHandler : ICommandHandler
+    internal class CreateCommandHandler : ICommandHandler<CreateCommand>
     {
-        public Task Handle(ICommand request, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task HandleAsync(ICommand command)
+        public Task Handle(CreateCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

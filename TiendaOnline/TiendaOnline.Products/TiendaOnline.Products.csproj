@@ -9,6 +9,8 @@
   <ItemGroup>
     <Folder Include="Application\Configuration\" />
     <Folder Include="Domain\Categories\Rules\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Integration\" />
   </ItemGroup>
 
   <ItemGroup>
