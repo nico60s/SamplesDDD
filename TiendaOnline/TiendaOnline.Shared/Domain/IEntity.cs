@@ -2,7 +2,7 @@
 namespace TiendaOnline.Shared.Domain
 {
     public interface IEntity<T>
-        where T: IdValueObject
+        where T : ValueObject
     {
         T Id { get; }
     }

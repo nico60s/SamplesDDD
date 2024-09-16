@@ -2,11 +2,14 @@
 
 namespace TiendaOnline.Shared.Domain
 {
-    public class Entity<T>(T id) : IEntity<T>
+    public class Entity : IEntity<IdValueObject>
+        
     {
-        private readonly T _id = id;
+        private readonly IdValueObject _id;
+        public IdValueObject Id => throw new NotImplementedException();
 
-        public T Id => _id;
+        public Entity(IdValueObject id) => id = _id;
+
         protected void CheckRule(IBusinessRule rule) 
         {
             if (rule.IsBroken)

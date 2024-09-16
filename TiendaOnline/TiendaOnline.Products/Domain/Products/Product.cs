@@ -2,7 +2,7 @@
 
 namespace TiendaOnline.Products.Domain.Products
 {
-    public class Product : Entity<ProductId>
+    public class Product : Entity, IHasDomainEvents
     {
         private readonly string _description;
 
@@ -10,5 +10,7 @@ namespace TiendaOnline.Products.Domain.Products
         {
             _description = description;
         }
+
+        public IReadOnlyCollection<IDomainEvent> Events => throw new NotImplementedException();
     }
 }
