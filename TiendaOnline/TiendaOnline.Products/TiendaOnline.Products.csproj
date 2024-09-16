@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Application\Configuration\" />
-    <Folder Include="Domain\" />
+    <Folder Include="Domain\Events\" />
+    <Folder Include="Domain\Rules\" />
   </ItemGroup>
 
   <ItemGroup>
