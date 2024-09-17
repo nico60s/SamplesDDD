@@ -5,7 +5,7 @@ using TiendaOnline.Shared.Domain;
 
 namespace TiendaOnline.Catalog.Domain.Catalog
 {
-    public class Catalog : Entity, IHasDomainEvents
+    public class Catalog : Entity<CatalogId>, IHasDomainEvents
     {
         private readonly List<DomainEvent> _events;
         private readonly string _name;

@@ -1,15 +1,12 @@
 ﻿
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using TiendaOnline.Shared.Application.Contracts;
 using TiendaOnline.Shared.Domain;
 
 namespace TiendaOnline.Shared.Infrastructure.DomainEventsDispatching
 {
-    public class DomainEventDispatcher : IDomainEventDispatcher
+    public class DomainEventDispatcher :IDomainEventDispatcher
     {
-        private readonly IServiceProvider _serviceProvider;
-
         private readonly IServiceProvider _serviceProvider;
 
         public DomainEventDispatcher(IServiceProvider serviceProvider)
@@ -17,7 +14,7 @@ namespace TiendaOnline.Shared.Infrastructure.DomainEventsDispatching
             _serviceProvider = serviceProvider;
         }
 
-        public async Task DispatchAsync<TEvent>(TEvent @event) where TEvent : IDomainEvent
+        public async Task HandleAsync<TEvent>(TEvent @event) where TEvent : DomainEvent
         {
             var handlers = _serviceProvider.GetServices<INotificationHandler<TEvent>>();
             foreach (var handler in handlers)

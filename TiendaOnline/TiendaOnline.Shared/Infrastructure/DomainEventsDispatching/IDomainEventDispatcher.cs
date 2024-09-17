@@ -1,13 +1,12 @@
 ﻿
 
-using MediatR;
 using TiendaOnline.Shared.Domain;
 
 namespace TiendaOnline.Shared.Infrastructure.DomainEventsDispatching
 {
-    public interface IDomainEventDispatcher : INotificationHandler<DomainEvent>
+    public interface IDomainEventDispatcher 
     {
-        Task DispatchAsync(IDomainEvent @event);
+        Task HandleAsync<TEvent>(TEvent @event) where TEvent : DomainEvent;
 
     }
 }

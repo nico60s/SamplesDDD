@@ -2,14 +2,19 @@
 
 namespace TiendaOnline.Products.Domain.Products
 {
-    public class ProductId : IdValueObject
+    public class ProductId : ValueObject
     {
-        protected ProductId(Guid id) : base(id)
+        public Guid Value { get; }
+        protected ProductId(Guid id)
         {
+            Value = id;
         }
         public static ProductId New() => new(Guid.NewGuid());
         public static ProductId FromValue(Guid id) => new(id);
-        public static ProductId FromIdValueObject(IdValueObject id) => new(id.Value);
-        
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value;
+        }
     }
 }

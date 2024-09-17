@@ -22,9 +22,9 @@ namespace TiendaOnline.Products.Application.Features.Create
             var product = Product.Create(id: ProductId.New(), description: request.Description);
             await _productRepository.AddAsync(product);
 
-            var productCreatedEvent = new ProductCreatedDomainEvent(product.Id.Fr);
+            var productCreatedEvent = new ProductCreatedDomainEvent(product.Id);
 
-            await _domainEventDispatcher.DispatchAsync(product.Events);
+            await _domainEventDispatcher.HandleAsync(productCreatedEvent);
 
         }
     }

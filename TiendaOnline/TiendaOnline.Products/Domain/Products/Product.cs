@@ -4,7 +4,7 @@ using TiendaOnline.Shared.Domain;
 
 namespace TiendaOnline.Products.Domain.Products
 {
-    public class Product : Entity, IHasDomainEvents
+    public class Product : Entity<ProductId>, IHasDomainEvents
     {
         private readonly string _description;
         private List<DomainEvent> _events; 

@@ -6,8 +6,8 @@ namespace TiendaOnline.Products.Domain.Products.Events
 {
     public class ProductCreatedDomainEvent : DomainEvent
     {
-        public Guid ProductId { get; private set; }
-        public ProductCreatedDomainEvent(Guid productId)
+        public ProductId ProductId { get; private set; }
+        public ProductCreatedDomainEvent(ProductId productId)
         {
             ProductId = productId;
         }
