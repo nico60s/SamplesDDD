@@ -10,7 +10,6 @@
     <Folder Include="Application\Contracts\" />
     <Folder Include="Application\Features\Categories\Remove\" />
     <Folder Include="Application\Features\Categories\Select\" />
-    <Folder Include="Domain\Categories\" />
   </ItemGroup>
 
   <ItemGroup>
