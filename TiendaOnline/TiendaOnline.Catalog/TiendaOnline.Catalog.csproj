@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Application\Contracts\" />
+    <Folder Include="Application\Features\Catalogs\AddCategory\" />
     <Folder Include="Application\Features\Categories\Remove\" />
     <Folder Include="Application\Features\Categories\Select\" />
   </ItemGroup>
