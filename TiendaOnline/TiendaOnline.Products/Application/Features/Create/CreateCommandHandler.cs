@@ -19,7 +19,10 @@ namespace TiendaOnline.Products.Application.Features.Create
         }
         public async Task Handle(CreateCommand request, CancellationToken cancellationToken)
         {
-            var product = Product.Create(id: ProductId.New(), description: request.Description);
+            var product = Product.Create(
+                id: ProductId.New(), 
+                description: request.Description);
+
             await _productRepository.AddAsync(product);
 
             var productCreatedEvent = new ProductCreatedDomainEvent(product.Id);
