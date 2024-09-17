@@ -7,7 +7,7 @@ namespace TiendaOnline.Products.Domain.Products
     public class Product : Entity, IHasDomainEvents
     {
         private readonly string _description;
-        private List<IDomainEvent> _events; 
+        private List<DomainEvent> _events; 
 
         private Product(ProductId id, string description) : base(id)
         {
@@ -15,8 +15,14 @@ namespace TiendaOnline.Products.Domain.Products
             _description = description;
             _events = [new ProductCreatedDomainEvent(id)];
         }
-        public static Product Create(ProductId id, string description) => new(id, description); 
-        
-        public IReadOnlyCollection<IDomainEvent> Events => _events;
+        public static Product Create(ProductId id, string description) => new(id, description);
+
+        public void AddEvent(DomainEvent domainEvent)
+        {
+            _events.Add(domainEvent);
+        }
+
+        public IReadOnlyCollection<DomainEvent> Events => _events;
+
     }
 }

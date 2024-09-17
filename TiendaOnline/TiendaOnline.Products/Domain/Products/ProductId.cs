@@ -9,5 +9,7 @@ namespace TiendaOnline.Products.Domain.Products
         }
         public static ProductId New() => new(Guid.NewGuid());
         public static ProductId FromValue(Guid id) => new(id);
+        public static ProductId FromIdValueObject(IdValueObject id) => new(id.Value);
+        
     }
 }

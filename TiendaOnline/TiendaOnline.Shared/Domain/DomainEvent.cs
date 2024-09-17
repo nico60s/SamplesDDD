@@ -3,7 +3,7 @@
 
 namespace TiendaOnline.Shared.Domain
 {
-    public abstract class DomainEvent : IDomainEvent
+    public class DomainEvent : IDomainEvent
     {
         private readonly DateTime _occurredOn;
         private readonly Guid _id;

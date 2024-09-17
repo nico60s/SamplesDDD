@@ -6,7 +6,7 @@ namespace TiendaOnline.Shared.Domain
         
     {
         private readonly IdValueObject _id;
-        public IdValueObject Id => throw new NotImplementedException();
+        public IdValueObject Id => _id;
 
         public Entity(IdValueObject id) => id = _id;
 

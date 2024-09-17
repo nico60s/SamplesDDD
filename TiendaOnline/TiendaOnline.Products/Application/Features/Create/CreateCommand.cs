@@ -6,6 +6,6 @@ namespace TiendaOnline.Products.Application.Features.Create
 {
     public record CreateCommand : ICommand
     {
-        string Description { get; set; }
+       public string Description { get; set; }
     }
 }

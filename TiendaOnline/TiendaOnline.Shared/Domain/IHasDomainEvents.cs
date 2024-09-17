@@ -3,6 +3,7 @@ namespace TiendaOnline.Shared.Domain
 {
     public interface IHasDomainEvents
     {
-        IReadOnlyCollection<IDomainEvent> Events { get; }
+        IReadOnlyCollection<DomainEvent> Events { get; }
+        void AddEvent(DomainEvent domainEvent);
     }
 }
